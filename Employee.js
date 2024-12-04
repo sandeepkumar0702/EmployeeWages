@@ -30,9 +30,13 @@ if(presentOrAbsent<0.5){
 else{
     console.log("Present");
     const salaryPerHour=20;
-    for(let i=0;i<workDaysInMonth;i++){
-        workHour=getWorkHour();
-        salary+=workHour*salaryPerHour;
+    const totalWork=160;
+    let day=2;
+    while(day<=20 || workHour<160){
+        let workHourInDay=getWorkHour();
+        salary+=workHourInDay*salaryPerHour;
+        workHour+=workHourInDay;
+        day++;
     }
 }
 console.log(salary);
