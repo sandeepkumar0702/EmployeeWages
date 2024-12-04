@@ -1,7 +1,8 @@
 const presentOrAbsent=Math.random();
 let workHour;
-let salary;
+let salary=0;
 const salaryPerHour=20;
+const workDaysInMonth=20;
 function getWorkHour(){
     let hour=Math.floor(Math.random()*2)+1;
     let workHourInday;
@@ -29,7 +30,9 @@ if(presentOrAbsent<0.5){
 else{
     console.log("Present");
     const salaryPerHour=20;
-    workHour=getWorkHour();
-    salary=workHour*salaryPerHour;
+    for(let i=0;i<workDaysInMonth;i++){
+        workHour=getWorkHour();
+        salary+=workHour*salaryPerHour;
+    }
 }
 console.log(salary);
