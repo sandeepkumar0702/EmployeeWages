@@ -1,6 +1,26 @@
 const presentOrAbsent=Math.random();
 let workHour;
 let salary;
+const salaryPerHour=20;
+function getWorkHour(){
+    let hour=Math.floor(Math.random()*2)+1;
+    let workHourInday;
+    switch(hour){
+        case 1:{
+            workHourInday=4;
+            break;
+        }
+        case 2:{
+            workHourInday=8;
+            break;
+        }
+        default:{
+            workHourInday=0;
+            break;
+        }
+    }
+    return workHourInday;
+}
 if(presentOrAbsent<0.5){
     workHour=0;
     salary=0;
@@ -9,23 +29,7 @@ if(presentOrAbsent<0.5){
 else{
     console.log("Present");
     const salaryPerHour=20;
-    let hour=Math.floor(Math.random()*2)+1;
-    switch(hour){
-        case 1:{
-            workHour=4;
-            salary=workHour*salaryPerHour;
-            break;
-        }
-        case 2:{
-            workHour=8;
-            salary=workHour*salaryPerHour;
-            break;
-        }
-        default:{
-            workHour=0;
-            salary=workHour*salaryPerHour;
-            break;
-        }
-    }
+    workHour=getWorkHour();
+    salary=workHour*salaryPerHour;
 }
 console.log(salary);
