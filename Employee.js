@@ -26,7 +26,7 @@ function getWorkHour(){
     return workHourInday;
 }
 
-for(let i=0;i<20 && workHour<140;i++){
+for(let i=0;i<20 && workHour<160;i++){
     let currSalary=0;
     let currWorkHour=0;
     if(presentOrAbsent){
