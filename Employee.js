@@ -40,3 +40,4 @@ else{
     }
 }
 console.log(salary);
+console.log(workHour);
