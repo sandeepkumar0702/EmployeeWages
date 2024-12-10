@@ -34,6 +34,6 @@ for(let i=0;i<20;i++){
         currSalary=currWorkHour*salaryPerHour;
         salary+=currSalary;
     }
-    console.log(`Workhour of  ${i+1}th day = ${currWorkHour}  and salary = ${currSalary}`);
+    console.log(`Workhour oN  ${i+1}th day = ${workHour}  and salary = ${salary}`);
 }
 console.log(`Workhour of month = ${workHour}  and salary = ${salary}`);
