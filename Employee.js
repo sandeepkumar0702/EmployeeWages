@@ -33,3 +33,4 @@ else{
     salary=workHour*salaryPerHour;
 }
 console.log(salary);
+console.log(workHour);
