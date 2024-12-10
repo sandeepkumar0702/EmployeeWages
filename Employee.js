@@ -1,5 +1,4 @@
-const presentOrAbsent=Math.random();
-let workHour;
+let workHour=0;
 let salary=0;
 const salaryPerHour=20;
 const workDaysInMonth=20;
@@ -22,17 +21,19 @@ function getWorkHour(){
     }
     return workHourInday;
 }
-if(presentOrAbsent<0.5){
-    workHour=0;
-    salary=0;
-    console.log("Absent");
-}
-else{
-    console.log("Present");
-    const salaryPerHour=20;
-    for(let i=0;i<workDaysInMonth;i++){
-        workHour=getWorkHour();
-        salary+=workHour*salaryPerHour;
+
+for(let i=0;i<20;i++){
+    const presentOrAbsent=Math.random();
+    let currSalary=0;
+    let currWorkHour=0;
+    if(presentOrAbsent<0.5){
     }
+    else{
+        currWorkHour=getWorkHour();
+        workHour+=currWorkHour;
+        currSalary=currWorkHour*salaryPerHour;
+        salary+=currSalary;
+    }
+    console.log(`Workhour of  ${i+1}th day = ${currWorkHour}  and salary = ${currSalary}`);
 }
-console.log(salary);
+console.log(`Workhour of month = ${workHour}  and salary = ${salary}`);
